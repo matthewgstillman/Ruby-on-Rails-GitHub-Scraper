@@ -12,7 +12,9 @@ gem "stimulus-rails" # JavaScript framework
 gem "jbuilder" # JSON API builder
 
 # Manage environment variables
-gem "dotenv-rails" # Required for managing .env files
+group :development, :test do
+  gem "dotenv-rails" # Manage .env files only in development and test
+end
 
 # Optional Features
 gem "sprockets-rails" # Asset pipeline
@@ -43,5 +45,5 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 # Caching and Performance
 gem "bootsnap", require: false # Reduces boot times
 
-#GitHUb API Client
-gem 'octokit'
+# GitHub API Client
+gem "octokit" # For GitHub API interaction
