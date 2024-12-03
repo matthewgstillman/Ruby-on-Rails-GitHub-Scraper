@@ -1,0 +1,27 @@
+# Default settings for all environments
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: <%= ENV.fetch("DB_HOST") { "localhost" } %>
+  port: <%= ENV.fetch("DB_PORT") { 5432 } %>
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
+
+# Development environment
+development:
+  <<: *default
+  database: github_scraper_development
+
+# Test environment
+test:
+  <<: *default
+  database: github_scraper_test
+
+# Production environment
+production:
+  <<: *default
+  database: github_scraper_production
+  # Using environment variables for sensitive data
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
