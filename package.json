@@ -1,0 +1,30 @@
+{
+  "name": "github_scraper",
+  "version": "1.0.0",
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --quiet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthewgstillman/Ruby-on-Rails-GitHub-Scraper.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matthewgstillman/Ruby-on-Rails-GitHub-Scraper/issues"
+  },
+  "homepage": "https://github.com/matthewgstillman/Ruby-on-Rails-GitHub-Scraper#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.16.0",
+    "eslint": "^9.16.0",
+    "globals": "^15.13.0"
+  }
+}
