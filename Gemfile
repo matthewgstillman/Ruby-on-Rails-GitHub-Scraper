@@ -26,7 +26,8 @@ gem "sprockets-rails" # Asset pipeline
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
   gem "brakeman", require: false # Security vulnerability scanner
-  gem "rubocop-rails-omakase", require: false # Ruby style checks
+  gem "rubocop", require: false # Ruby style and linting
+  gem "rubocop-rails", require: false # Additional Rails-specific linting rules
 end
 
 group :development do
@@ -47,3 +48,6 @@ gem "bootsnap", require: false # Reduces boot times
 
 # GitHub API Client
 gem "octokit" # For GitHub API interaction
+
+# Stringio
+gem "stringio", "~> 3.1"
